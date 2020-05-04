@@ -13,4 +13,10 @@ class Storage {
         localStorage.getItem('country') === null
           ? (this.country = this.defaultState)
           : (this.country = localStorage.getItem('country'))
-    
+      
+          return {
+            city: this.city,
+            country: this.country
+          }
+        }
+      

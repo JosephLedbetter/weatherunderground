@@ -5,4 +5,12 @@ class Storage {
       this.defaultCity = 'London'
       this.defaultState = 'UK'
     }
-  
+    getLocationData() {
+        localStorage.getItem('city') === null
+          ? (this.city = this.defaultCity)
+          : (this.city = localStorage.getItem('city'))
+    
+        localStorage.getItem('country') === null
+          ? (this.country = this.defaultState)
+          : (this.country = localStorage.getItem('country'))
+    

@@ -29,3 +29,12 @@ document.getElementById('w-change-btn').addEventListener('click', e => {
     //close modal
     $('#locModal').modal('hide')
 })
+
+function getWeather() {
+    weather
+        .getWeather()
+        .then(results => {
+            ui.paint(results)
+        })
+        .catch(err => console.log(err))
+}

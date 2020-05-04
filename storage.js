@@ -19,4 +19,9 @@ class Storage {
             country: this.country
           }
         }
-      
+        setLocationData(city, country) {
+            localStorage.setItem('city', city)
+            localStorage.setItem('country', country)
+          }
+        }
+        
